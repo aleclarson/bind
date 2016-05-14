@@ -15,4 +15,6 @@ method = bindMethod obj, "method"
 method() # => 1
 ```
 
-This is most useful when `obj` is actually `some.nested.obj`!
+- Most useful when `obj` is actually `some.nested.obj`!
+
+- Binding arguments is not supported.
