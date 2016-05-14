@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "bindMethod.js",
+  "sourceRoot": "../../src",
+  "sources": [
+    "bindMethod.coffee"
+  ],
+  "names": [],
+  "mappings": "AACA,MAAM,CAAC,OAAP,GAAiB,SAAC,GAAD,EAAM,GAAN;AACf,MAAA;EAAA,MAAA,GAAS,GAAI,CAAA,GAAA;AACb,SAAO,SAAA;WAAG,MAAM,CAAC,KAAP,CAAa,GAAb,EAAkB,SAAlB;EAAH;AAFQ"
+}

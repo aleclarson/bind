@@ -1,0 +1,10 @@
+{
+  "name": "bindMethod",
+  "version": "1.0.0",
+  "main": "js/src/bindMethod",
+  "lotus": {
+    "plugins": [
+      "lotus-coffee"
+    ]
+  }
+}
