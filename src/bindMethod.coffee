@@ -1,9 +1,19 @@
 
+require "isDev"
+
+assertType = require "assertType"
+wrapValue = isDev and require "wrapValue"
+
 module.exports = (obj, key) ->
 
   method = obj[key]
 
-  if typeof method isnt "function"
-    throw TypeError "Expected a kind of Function!"
+  assertType method, Function
+
+  if isDev
+    return wrapValue method, (orig) ->
+      method = -> orig.apply obj, arguments
+      method.toString = -> orig.toString()
+      return method
 
   return -> method.apply obj, arguments

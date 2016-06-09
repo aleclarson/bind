@@ -6,5 +6,10 @@
     "plugins": [
       "lotus-coffee"
     ]
+  },
+  "dependencies": {
+    "assertType": "aleclarson/assertType#1.0.0",
+    "isDev": "aleclarson/isDev#1.0.0",
+    "wrapValue": "aleclarson/wrapValue#1.0.0"
   }
 }
