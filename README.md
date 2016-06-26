@@ -1,20 +1,22 @@
 
-# bindMethod 1.0.0 ![stable](https://img.shields.io/badge/stability-stable-4EBA0F.svg?style=flat)
+# bind 1.0.0 ![stable](https://img.shields.io/badge/stability-stable-4EBA0F.svg?style=flat)
+
+When in `__DEV__` mode, `toString` is overridden to use the wrapped function's `toString`.
+
+You can optionally bind the `arguments`, but that results in the arguments passed to the bound function being ignored.
 
 ```coffee
-bindMethod = require "bindMethod"
+bind = require "bind"
 
-obj =
-  foo: 1
-  method: -> @foo
+fn = (b, c) -> [ @a, b, c ]
+bound = bind.func fn, { a: 1 }, [ 2, 3 ]
+bound() # => [ 1, 2, 3 ]
 
-method = obj.method
-method() # => undefined
+obj = a: 1, fn: (b, c) -> [ @a, b, c ]
+bound = bind.method obj, "fn", [ 2, 3 ]
+bound() # => [ 1, 2, 3 ]
 
-method = bindMethod obj, "method"
-method() # => 1
+orig = -> "orig"
+wrapped = bind.toString orig, -> "wrapped"
+wrapped.toString() # => 'function() { return "orig"; }'
 ```
-
-- Most useful when `obj` is actually `some.nested.obj`!
-
-- Binding arguments is not supported.

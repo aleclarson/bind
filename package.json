@@ -1,7 +1,7 @@
 {
-  "name": "bindMethod",
+  "name": "bind",
   "version": "1.0.0",
-  "main": "js/src/bindMethod",
+  "main": "js/src/bind",
   "lotus": {
     "plugins": [
       "lotus-coffee"
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "assertType": "aleclarson/assertType#1.0.0",
+    "emptyFunction": "aleclarson/emptyFunction#1.0.0",
     "isDev": "aleclarson/isDev#1.0.0",
     "wrapValue": "aleclarson/wrapValue#1.0.0"
   }
