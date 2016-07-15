@@ -4,6 +4,18 @@ require "isDev"
 emptyFunction = require "emptyFunction"
 assertType = require "assertType"
 
+shiftArray = Function::call.bind Array::shift
+
+bindArgs = ->
+  args = arguments
+  func = shiftArray args
+  assertType func, Function
+  offset = args.length
+  return bindToString func, ->
+    for arg, index in arguments
+      args[offset + index] = arg
+    func.apply this, args
+
 bindFunc = (func, context, args) ->
   assertType func, Function
   return bindToString func, ->
@@ -22,6 +34,7 @@ isDev and bindToString = (orig, func) ->
   return func
 
 module.exports =
+  args: bindArgs
   func: bindFunc
   method: bindMethod
   toString: bindToString
