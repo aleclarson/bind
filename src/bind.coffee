@@ -1,8 +1,7 @@
 
-require "isDev"
-
 emptyFunction = require "emptyFunction"
 assertType = require "assertType"
+isDev = require "isDev"
 
 shiftArray = Function::call.bind Array::shift
 
