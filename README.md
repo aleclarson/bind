@@ -1,5 +1,5 @@
 
-# bind 1.0.0 ![stable](https://img.shields.io/badge/stability-stable-4EBA0F.svg?style=flat)
+# bind v1.0.1 ![stable](https://img.shields.io/badge/stability-stable-4EBA0F.svg?style=flat)
 
 When in `__DEV__` mode, `toString` is overridden to use the wrapped function's `toString`.
 

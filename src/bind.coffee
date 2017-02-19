@@ -1,8 +1,7 @@
 
-require "isDev"
-
 emptyFunction = require "emptyFunction"
 assertType = require "assertType"
+isDev = require "isDev"
 
 shiftArray = Function::call.bind Array::shift
 
@@ -28,9 +27,8 @@ bindMethod = (obj, key, args) ->
   return bindToString method, ->
     method.apply obj, args or arguments
 
-bindToString = emptyFunction
-isDev and bindToString = (orig, func) ->
-  func.toString = -> orig.toString()
+bindToString = (orig, func) ->
+  isDev and func.toString = -> orig.toString()
   return func
 
 module.exports =
