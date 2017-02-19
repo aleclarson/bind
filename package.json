@@ -1,0 +1,10 @@
+{
+  "name": "bind",
+  "version": "1.0.1",
+  "main": "js/bind",
+  "dependencies": {
+    "assertType": "aleclarson/assertType#2.0.0",
+    "emptyFunction": "aleclarson/emptyFunction#1.0.0",
+    "isDev": "aleclarson/isDev#2.0.0"
+  }
+}
