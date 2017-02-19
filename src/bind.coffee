@@ -1,5 +1,4 @@
 
-emptyFunction = require "emptyFunction"
 assertType = require "assertType"
 isDev = require "isDev"
 
@@ -27,9 +26,10 @@ bindMethod = (obj, key, args) ->
   return bindToString method, ->
     method.apply obj, args or arguments
 
-bindToString = (orig, func) ->
-  isDev and func.toString = -> orig.toString()
-  return func
+bindToString =
+  if isDev
+  then (orig, func) -> Object.defineProperty func, "toString", value: -> orig.toString()
+  else (orig, func) -> func
 
 module.exports =
   args: bindArgs
