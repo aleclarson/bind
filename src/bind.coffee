@@ -1,5 +1,4 @@
 
-emptyFunction = require "emptyFunction"
 assertType = require "assertType"
 isDev = require "isDev"
 
