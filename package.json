@@ -1,6 +1,6 @@
 {
   "name": "bind",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "js/bind",
   "plugins": [
     "lotus-coffee"
@@ -10,7 +10,7 @@
     "postinstall": "npm run build"
   },
   "dependencies": {
-    "assertType": "aleclarson/assertType#2.0.1",
+    "assertType": "aleclarson/assertType#2.0.2",
     "isDev": "aleclarson/isDev#2.0.0"
   }
 }
