@@ -1,6 +1,6 @@
 {
   "name": "bind",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "js/bind",
   "plugins": [
     "lotus-coffee"
